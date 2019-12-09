@@ -1,0 +1,11 @@
+---
+- name: Deploy code
+  hosts: all
+
+  tasks:
+    - name: sync code
+      synchronize:
+        src: ../code/
+        dest: code
+        recursive: yes
+        archive: no
